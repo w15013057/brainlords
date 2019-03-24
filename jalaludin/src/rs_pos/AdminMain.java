@@ -36,9 +36,6 @@ public final class AdminMain extends javax.swing.JFrame
     /**
      * Creates new form test
      */
-    DatabaseQueries dbq = new DatabaseQueries();
-    GetAdminInfo a = new GetAdminInfo();
-    PasswordHashing pw = new PasswordHashing();
     //Initialize ArrayList to store username for undo purposes 
     ArrayList<String> tempUsername = new ArrayList<>();
     ArrayList<String> initialTaskIDS = new ArrayList<>();
