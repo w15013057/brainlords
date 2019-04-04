@@ -287,7 +287,7 @@ public class LoginUI extends javax.swing.JFrame {
                 welcomeMessage();
                 
                 // Open administrator menu UI 
-                AdminMain menu = new AdminMain();
+                main menu = new main();
                 menu.setVisible(true);
                 //Dispose the current window
                 this.dispose();
@@ -297,7 +297,7 @@ public class LoginUI extends javax.swing.JFrame {
                 welcomeMessage();
                
                 // Open employee menu UI
-                EmployeeMain menu = new EmployeeMain();
+                main menu = new main();
                 menu.setVisible(true);
                 //Dispose the current window
                 this.dispose();

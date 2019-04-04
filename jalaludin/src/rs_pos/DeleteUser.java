@@ -165,7 +165,7 @@ public class DeleteUser extends javax.swing.JFrame {
         //Dispose of this window
         this.dispose();
         //Display administrator main menu
-        AdminMain menu = new AdminMain();
+        main menu = new main();
         menu.setVisible(true);
     }
     
