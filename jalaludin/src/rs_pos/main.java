@@ -31,8 +31,7 @@ public class main extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         parent = new javax.swing.JPanel();
         sidePanel = new javax.swing.JPanel();
@@ -66,8 +65,6 @@ public class main extends javax.swing.JFrame
         panel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1390, 695));
-        setPreferredSize(new java.awt.Dimension(1390, 695));
 
         sidePanel.setBackground(new java.awt.Color(1, 50, 67));
 
@@ -79,10 +76,8 @@ public class main extends javax.swing.JFrame
 
         usersBtn.setBackground(new java.awt.Color(1, 50, 67));
         usersBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        usersBtn.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mousePressed(java.awt.event.MouseEvent evt)
-            {
+        usersBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
                 usersBtnMousePressed(evt);
             }
         });
@@ -111,10 +106,8 @@ public class main extends javax.swing.JFrame
 
         inventoryBtn.setBackground(new java.awt.Color(1, 50, 67));
         inventoryBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        inventoryBtn.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mousePressed(java.awt.event.MouseEvent evt)
-            {
+        inventoryBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
                 inventoryBtnMousePressed(evt);
             }
         });
@@ -143,10 +136,8 @@ public class main extends javax.swing.JFrame
 
         reportBtn.setBackground(new java.awt.Color(1, 50, 67));
         reportBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        reportBtn.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mousePressed(java.awt.event.MouseEvent evt)
-            {
+        reportBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
                 reportBtnMousePressed(evt);
             }
         });
@@ -174,10 +165,8 @@ public class main extends javax.swing.JFrame
         reportBtn.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 180, 40));
 
         manageBtn.setBackground(new java.awt.Color(1, 50, 67));
-        manageBtn.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mousePressed(java.awt.event.MouseEvent evt)
-            {
+        manageBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
                 manageBtnMousePressed(evt);
             }
         });
@@ -211,10 +200,8 @@ public class main extends javax.swing.JFrame
 
         panel5Btn.setBackground(new java.awt.Color(1, 50, 67));
         panel5Btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        panel5Btn.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mousePressed(java.awt.event.MouseEvent evt)
-            {
+        panel5Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
                 panel5BtnMousePressed(evt);
             }
         });
@@ -403,9 +390,7 @@ public class main extends javax.swing.JFrame
                 .addComponent(sidePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(parentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(topPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(parentLayout.createSequentialGroup()
-                        .addGap(0, 0, 0)
-                        .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(body, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, 0))
         );
         parentLayout.setVerticalGroup(
