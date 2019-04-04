@@ -9,8 +9,15 @@ package rs_pos;
  *
  * @author w15015051
  */
-public class Rs_pos {
-    public static void main(String[] args){
-        
+public class Item {
+    String itemName;
+    int price;
+    int quantity;
+    
+    public Item (String itemName, int price, int quantity)
+    {
+        this.itemName = itemName;
+        this.price = price;
+        this.quantity = quantity;
     }
 }
