@@ -22,7 +22,7 @@ public class ReactivateUser extends javax.swing.JFrame {
     }
     //Call reactivateUser ArrayList
     ArrayList<String> userList = new ArrayList<String>();
-    DatabaseQueries dBQuery = new DatabaseQueries();
+    DB_Helper dBQuery = new DB_Helper();
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

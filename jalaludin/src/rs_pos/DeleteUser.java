@@ -19,7 +19,7 @@ public class DeleteUser extends javax.swing.JFrame {
     }
     
     ArrayList<String> userList = new ArrayList<String>();
-    DatabaseQueries dBQuery = new DatabaseQueries();
+    DB_Helper dBQuery = new DB_Helper();
     
     /**
      * This method is called from within the constructor to initialize the form.

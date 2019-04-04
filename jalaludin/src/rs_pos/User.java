@@ -19,8 +19,8 @@ public class User {
         this.isAdmin = isAdmin;
     }
     
-    public User(){
-        
+    // Empty constructer
+    public User(){    
     }
 
     // Returns id

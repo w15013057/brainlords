@@ -12,9 +12,9 @@ import javax.swing.JOptionPane;
 public class LoginUI extends javax.swing.JFrame {
 
     /**
-     * Creates new form LoginSystem2
+     * Creates new form 
      */
-    DatabaseQueries dBQuery = new DatabaseQueries();
+    DB_Helper dBQuery = new DB_Helper();
     Hashing hash = new Hashing();
     User user = new User();
 
@@ -281,37 +281,21 @@ public class LoginUI extends javax.swing.JFrame {
             boolean userType = dBQuery.checkUserType(username, passwordHashed);
             //Check if the user is admin or caretaker and if the username and 
             //password is correct
-            if (login && userType) {
-                //Retrieve admin information from the query function 
-                //TODO: change to relevant DB Method
-                String[] aInfo = dBQuery.getAdminDetails(username);  
-
-                //Store the information accordingly in a class which is used for
-                //referencing in the main menu
-                user.setID(dBQuery.getAdminID(username));
-                user.setFName(aInfo[0]);
-                user.setLName(aInfo[1]);
-                user.setUsername(aInfo[2]);
-
+            if (login && userType) {             
+                
+                setUserDetails(username);
+                welcomeMessage();
+                
                 //Call admin main menu and open the admin main menu window 
                 AdminMain adMain = new AdminMain();
                 adMain.setVisible(true);
                 //Dispose the current window
                 this.dispose();
-            } else if (login && !userType) {
-                //Retrieve caretaker information from the query function
-                String[] ctInfo = dBQuery.getCaretakerDetails(username);
-
-                //Store the information accordingly in a class which is used for
-                //referencing in the caretaker main menu
-                //TODO: change to relevant DB Method
-                user.setID(dBQuery.getCaretakerID(username));
-                user.setFName(ctInfo[0]);
-                user.setLName(ctInfo[1]);
-                user.setUsername(ctInfo[2]);
-
-                welcomeMessage();
                 
+            } else if (login && !userType) {
+                setUserDetails(username);
+                welcomeMessage();
+               
                 //Call caretaker main menu and open the caretaker main menu window
                 CaretakerMain ctMain = new CaretakerMain();
                 ctMain.setVisible(true);
@@ -329,6 +313,18 @@ public class LoginUI extends javax.swing.JFrame {
         } catch (Exception ex) {
             Logger.getLogger(LoginUI.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    public void setUserDetails(String username){
+        //Retrieve admin information from the query function 
+        //TODO: change to relevant DB Method
+        String[] aInfo = dBQuery.getAdminDetails(username);  
+        //Store the information accordingly in a class which is used for
+        //referencing in the main menu
+        user.setID(dBQuery.getAdminID(username));
+        user.setFName(aInfo[0]);
+        user.setLName(aInfo[1]);
+        user.setUsername(aInfo[2]);
     }
     
     public void welcomeMessage(){
