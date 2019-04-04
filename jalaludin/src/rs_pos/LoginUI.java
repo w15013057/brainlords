@@ -286,9 +286,9 @@ public class LoginUI extends javax.swing.JFrame {
                 setUserDetails(username);
                 welcomeMessage();
                 
-                //Call admin main menu and open the admin main menu window 
-                AdminMain adMain = new AdminMain();
-                adMain.setVisible(true);
+                // Open administrator menu UI 
+                AdminMain menu = new AdminMain();
+                menu.setVisible(true);
                 //Dispose the current window
                 this.dispose();
                 
@@ -296,9 +296,9 @@ public class LoginUI extends javax.swing.JFrame {
                 setUserDetails(username);
                 welcomeMessage();
                
-                //Call caretaker main menu and open the caretaker main menu window
-                CaretakerMain ctMain = new CaretakerMain();
-                ctMain.setVisible(true);
+                // Open employee menu UI
+                EmployeeMain menu = new EmployeeMain();
+                menu.setVisible(true);
                 //Dispose the current window
                 this.dispose();
             } //If username and password is invalid
@@ -307,8 +307,7 @@ public class LoginUI extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Invalid Login Details",
                         "Error", JOptionPane.ERROR_MESSAGE);
                 // Clear inputs
-                usernameJtxt.setText(null);
-                passwordJtxt.setText(null);
+                clearInputs();
             }
         } catch (Exception ex) {
             Logger.getLogger(LoginUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -318,18 +317,22 @@ public class LoginUI extends javax.swing.JFrame {
     public void setUserDetails(String username){
         //Retrieve admin information from the query function 
         //TODO: change to relevant DB Method
-        String[] aInfo = dBQuery.getAdminDetails(username);  
+        String[] aInfo = dBQuery.getUserDetails(username);  
         //Store the information accordingly in a class which is used for
         //referencing in the main menu
-        user.setID(dBQuery.getAdminID(username));
+        user.setID(dBQuery.getUserID(username));
         user.setFName(aInfo[0]);
         user.setLName(aInfo[1]);
         user.setUsername(aInfo[2]);
     }
     
-    public void welcomeMessage(){
+    public void clearInputs(){
         usernameJtxt.setText(null);
         passwordJtxt.setText(null);
+    }
+    
+    public void welcomeMessage(){
+        clearInputs();
         JOptionPane.showMessageDialog(null, "Hello " + user.getFName()
                 + " " + user.getLName(),
                 "Welcome!", JOptionPane.INFORMATION_MESSAGE);

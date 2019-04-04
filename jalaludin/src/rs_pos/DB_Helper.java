@@ -26,4 +26,12 @@ public class DB_Helper {
         //TODO: Check if user is admin
         return isAdmin;
     }
+    public int getUserID(String username){
+        int userID = 0;
+        return userID;
+    }
+    public String[] getUserDetails(String username){
+        String[] userDetails = null;
+        return userDetails;
+    }
 }
