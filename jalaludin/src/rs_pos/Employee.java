@@ -9,8 +9,6 @@ package rs_pos;
  *
  * @author w15015051
  */
-public class Rs_pos {
-    public static void main(String[] args){
-        
-    }
+public class Employee {
+    
 }
